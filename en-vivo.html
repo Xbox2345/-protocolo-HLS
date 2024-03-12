@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmisión en Vivo - Cajamarca TV</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <a href="index.html" class="logo">Cajamarca TV</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <!-- Agrega otros enlaces según sea necesario -->
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/CajamarcaTV/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/cajamarcatv/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@CajamarcaTVcanaldelideres" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@cajamarcatelevision?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </header>
+    
+
+<!-- Sección de streaming específica para esta página -->
+<section class="stream-section">
+    <div class="stream-container">
+        <h2>EN VIVO</h2>
+        <video id="video" controls>
+            <source src="https://s1.tvdatta.com:3252/live/cajamarcatvlive.m3u8" type="application/x-mpegURL">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+</section>
+
+<!-- Colocar scripts de HLS.js si es necesario -->
+
+<footer>
+    <!-- Footer como en la página principal -->
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  var video = document.getElementById('video');
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('https://s1.tvdatta.com:3252/live/cajamarcatvlive.m3u8');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+      video.play();
+    });
+  }
+  // Soporte nativo de HLS en navegadores como Safari
+  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'https://s1.tvdatta.com:3252/live/cajamarcatvlive.m3u8';
+    video.addEventListener('canplay', function() {
+      video.play();
+    });
+  }
+</script>
+
+</body>
+</html>

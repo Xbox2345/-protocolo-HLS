@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f0f0; /* O el color que prefieras */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Cambia a un color que coincida con tu marca */
+    padding: 10px 20px;
+}
+
+.top-bar .logo {
+    color: #fff; /* O el color que prefieras para el texto del logo */
+    text-decoration: none;
+    font-size: 24px; /* Ajusta el tamaño según tus necesidades */
+    font-weight: bold; /* Para darle más impacto al texto del logo */
+}
+
+.main-nav ul {
+    list-style-type: none; /* Remueve los bullets de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 20px; /* Añade espacio entre los elementos de la lista */
+}
+
+.main-nav a {
+    color: #fff; /* O el color que prefieras para los enlaces */
+    text-decoration: none;
+}
+
+.social-icons a {
+    color: #fff; /* O el color que prefieras para los íconos de redes sociales */
+    margin: 0 10px;
+}
+.main-nav ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+.stream-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Esto centra el contenido verticalmente */
+    height: 80vh; /* Esto hace que la sección tome toda la altura de la ventana gráfica */
+    padding-top: 50px; /* Ajusta esto para bajar el video */
+}
+
+
+.stream-container {
+    width: 70%; /* Ajusta este valor para cambiar el ancho del contenedor de video */
+    background-color: #000; /* Un fondo para hacer que cualquier espacio adicional sea menos notable */
+    padding: 10px; /* Agrega algo de espacio alrededor del video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: añade una sombra para darle profundidad */
+}
+
+video {
+    width: 100%; /* Hace que el video se ajuste al ancho del contenedor */
+    max-width: 900px; /* Ajusta a la anchura máxima deseada para el video */
+    height: auto; /* Mantiene la proporción del video al ajustar la anchura */
+}
+
+
+
+
+.social-icons a:hover, .main-nav a:hover {
+}
+
+
