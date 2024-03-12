@@ -1,0 +1,200 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f0f0; /* Color de fondo para cargar antes de que la imagen esté disponible */
+    background-size: cover; /* Asegúrate de que la imagen cubra todo el espacio disponible */
+    background-repeat: no-repeat; /* La imagen no se repetirá */
+    background-position: center center; /* Centra la imagen de fondo */
+}
+
+
+
+/* Estilos del Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282bccec; /* Color de fondo gris */
+    color: #0b0c0c; /* Color de texto negro */
+    padding: 10px 20px;
+}
+.logo-container {
+    margin-left: 80px; /* O el valor específico que necesites para mover el logo hacia la derecha */
+    /* ...otros estilos... */
+}
+
+
+.logo-container img {
+    height: 100px; /* Ajusta este valor para que coincida con el tamaño de tu logo */
+    /* Asegúrate de no tener un margen excesivo aquí que pueda empujar otros elementos */
+}
+
+/* Estilos para la navegación principal */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.main-nav {
+    margin-left: 550px; /* O el valor específico que necesites */
+    /* ...otros estilos... */
+}
+
+
+.main-nav li {
+    margin-right: 20px;
+    
+}
+
+.main-nav a {
+    color: #000000; /* Color de texto negro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la navegación de redes sociales */
+.social-media-nav {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    align-items: center; /* Centra los iconos verticalmente */
+    /* Quita flex-grow o ajusta según sea necesario para el espacio adecuado */
+}
+
+.social-media-nav a {
+    color: #000000de;
+    font-size: 1.5em; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espacio horizontal entre los iconos */
+}
+
+/* ...resto del código... */
+
+/* Estilos para la barra de búsqueda y el menú */
+.search-and-menu {
+    display: flex;
+    align-items: center;
+}
+
+.search-and-menu a, .search-and-menu button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em; /* Tamaño de los iconos */
+    margin-left: 10px;
+}
+
+.menu-toggle {
+    display: none; /* El botón de menú de hamburguesa se ocultará en pantallas grandes */
+}
+
+/* Estilos para la barra de categorías */
+.category-bar {
+    background-color: #d2232a; /* Color de fondo rojo */
+    overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+}
+
+.category-bar ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-bar li {
+    padding: 10px 20px; /* Espaciado alrededor de cada enlace */
+}
+
+.category-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /* Tamaño más grande de la fuente */
+}
+
+.category-bar a:hover {
+    text-decoration: underline;
+}
+
+.custom-background {
+    background-image: url('imagenes de canal21/sex2.jpg');
+    background-size: cover; /* Esto cubrirá el área completa de .custom-background */
+    background-repeat: no-repeat;
+    background-position: center center; /* Esto centrará tu imagen en el div */
+    height: 400px; /* Ajusta esto según el tamaño que necesites */
+    width: 100%; /* Esto hará que el fondo se extienda a lo ancho de la página */
+}
+
+.custom-background {
+    background-size: 50%; /* o el porcentaje que prefieras */
+    /* Resto del CSS... */
+}
+
+
+.news-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crea una cuadrícula con columnas que se ajustan al tamaño del contenido */
+    gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-category {
+    background-color: #e53935;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 10;
+}
+
+.news-item h3 {
+    margin-top: 10px;
+}
+
+.news-time {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.news-tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #eee;
+    padding: 2px 8px;
+    margin-right: 5px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}

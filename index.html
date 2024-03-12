@@ -19,10 +19,12 @@
             <ul>
                 <li><a href="#noticias">Noticias</a></li>
                 <li><a href="#programas">Programas</a></li>
-                <li><a href="#en-vivo">En vivo</a></li>t
+                <li><a href="en-vivo.html">En vivo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+        
+        
 
         <nav class="social-media-nav">
             <a href="https://www.facebook.com/CajamarcaTV/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -125,41 +127,21 @@
 
         </div>
     </section>
-
-
-    <section class="stream-section">
-        <div class="stream-container">
-            <h2>EN VIVO</h2>
-            <video id="video" controls autoplay>
-                <source src="https://s1.tvdatta.com:3252/live/cajamarcatvlive.m3u8" type="application/x-mpegURL">
-                Tu navegador no soporta el elemento de video.
-            </video>
-            
+    
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contacto</h3>
+            <p>Dirección: Av. Ejemplo 123, Cajamarca</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Email: info@cajamarcatv.com</p>
         </div>
-    </section>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 Cajamarca TV - Todos los derechos reservados</p>
+    </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script>
-      var video = document.getElementById('video');
-      if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource('https://s1.tvdatta.com:3252/live/cajamarcatvlive.m3u8');
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, function() {
-          video.play();
-        });
-      }
-      // Soporte nativo de HLS en navegadores como Safari
-      else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = 'https://s1.tvdatta.com:3252/live/cajamarcatvlive.m3u8';
-        video.addEventListener('canplay', function() {
-          video.play();
-        });
-      }
-    </script>
-    
-    
-    
 
 </body>
 </html>
